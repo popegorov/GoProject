@@ -1,0 +1,11 @@
+global:
+  scrape_interval:     15s 
+
+scrape_configs:
+  - job_name: 'driver_service'
+    static_configs:
+      - targets: ['driver_service:8080']
+
+  - job_name: 'location_service'
+    static_configs:
+      - targets: ['location_service:8081']
